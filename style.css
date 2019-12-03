@@ -1,4 +1,4 @@
-.brand {
-  font-weight: bold;
-  color: brown;
+#brand {
+  font-weight: bold !important;
+  color: white !important;
 }
