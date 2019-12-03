@@ -4,16 +4,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-  <title>Wardrope Shopping List</title>
+  <link rel="stylesheet" href="../style.css">
+  <title>Wardrope Shopping Lis</title>
 </head>
 <body>
 <div class="container-fuid">
-  <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand">Navbar</a>
-    <form class="form-inline">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add New Item</button>
-    </form>
+  <nav class="navbar navbar-light bg-light px-5">
+    <a class="navbar-brand brand">Shopping List</a>
+    <button class="btn btn-dark my-2 my-sm-0" type="submit">Add New Item</button>
   </nav>
 </div>
 
