@@ -4,14 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
   <title>Wardrope Shopping List</title>
 </head>
+
+<style>
+#brand {
+  font-weight: bold !important;
+  color: white !important;
+};
+</style>
 <body>
 <div class="container-fuid">
   <nav class="navbar navbar-light bg-dark px-5">
     <a href="index.php" class="navbar-brand" id="brand">Shopping List</a>
-    <a class="btn btn-outline-light my-2 my-sm-0">Add New Item</a>
+    <a class="btn btn-light my-2 my-sm-0">Add New Item</a>
   </nav>
 </div>
 
