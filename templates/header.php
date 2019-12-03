@@ -8,6 +8,7 @@
 </head>
 
 <style>
+
 #brand {
   font-weight: bold !important;
   color: white !important;
@@ -21,6 +22,10 @@ form{
 
 button{
   margin-top: 20px !important;
+}
+
+.content{
+  height: 85vh;
 }
 </style>
 <body>
