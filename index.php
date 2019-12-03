@@ -1,3 +1,5 @@
+<?php include "ChromePhp.php" ?>
+
 <?php 
 
 
@@ -5,7 +7,8 @@
 
 
 
-<?php include "additem.php";?>
+<?php include "templates/header.php";?>
+<?php include "templates/footer.php";?>
 
 
 

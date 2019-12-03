@@ -43,12 +43,15 @@ if(isset($_POST["submit"])){
   }else{
     $link =  htmlspecialchars($_POST["link"]);
   };
-}
+};
+
+if(!array_filter($errors)){
+  header("location: index.php");
+};
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+
 
 <?php include "templates/header.php";?>
 
