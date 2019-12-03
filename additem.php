@@ -2,14 +2,11 @@
 
 
 ?>
-<style>
-form{
-  width: 35vw;
-}
-</style>
 
 <!DOCTYPE html>
 <html lang="en">
+
+<?php include "templates/header.php";?>
 
 
 <section class="container d-flex flex-column justify-content-center">
@@ -23,9 +20,12 @@ form{
     <input type="text" name="store">
     <label for="link">Item link:</label>
     <input type="text" name="link">
-    <div class="text-center">
-    <button class="btn btn-dark my-2 my-sm-0" type="submit" value="submit" name="submit">Add New Item</button>
+    <div class="text-center mt-3">
+    <button class="btn btn-dark my-2 my-sm-0" type="submit" value="submit" name="submit">Submit</button>
     </div>
   </form>
 </section>
+
+<?php include "templates/footer.php"?>
+
 

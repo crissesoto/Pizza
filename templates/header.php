@@ -11,7 +11,17 @@
 #brand {
   font-weight: bold !important;
   color: white !important;
-};
+}
+
+form{
+  width: 35vw;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+button{
+  margin-top: 20px !important;
+}
 </style>
 <body>
 <div class="container-fuid">
