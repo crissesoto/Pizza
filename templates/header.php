@@ -10,8 +10,8 @@
 <body>
 <div class="container-fuid">
   <nav class="navbar navbar-light bg-dark px-5">
-    <a class="navbar-brand" id="brand">Shopping List</a>
-    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Add New Item</button>
+    <a href="index.php" class="navbar-brand" id="brand">Shopping List</a>
+    <a class="btn btn-outline-light my-2 my-sm-0">Add New Item</a>
   </nav>
 </div>
 
