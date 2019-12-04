@@ -46,7 +46,7 @@ if(isset($_POST["submit"])){
 };
 
 if(!array_filter($errors)){
-  header("location: index.php");
+  //header("location: index.php");
 };
 
 ?>

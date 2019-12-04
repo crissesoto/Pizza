@@ -31,6 +31,7 @@ button{
   height: 85vh;
 }
 </style>
+
 <body>
 <div class="container-fuid">
   <nav class="navbar navbar-light bg-dark px-5">
