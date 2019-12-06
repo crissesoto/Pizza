@@ -55,7 +55,7 @@ button{
 <div class="container-fuid">
   <nav class="navbar navbar-light bg-white px-5">
     <a href="index.php" class="navbar-brand" id="brand">Shopping List</a>
-    <a class="btn btn-dark text-white my-2 my-sm-0 font-weight-bold">Add New Item</a>
+    <a href="additem.php" class="btn btn-dark text-white my-2 my-sm-0 font-weight-bold">Add New Item</a>
   </nav>
 </div>
 

@@ -25,10 +25,11 @@ mysqli_free_result($result);
 // 5: close the connection
 mysqli_close($connection);
 
-ChromePhp::log($items);
-
+//ChromePhp::log($items);
 
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
