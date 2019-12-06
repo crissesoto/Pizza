@@ -44,7 +44,8 @@ if(!$connection){
 <!-- Start Header-->
 <?php include "templates/header.php";?>
 <div class="container w-75 ">
-<div class=" w-75 mx-auto bg-light d-flex flex-column text-center">
+<?php if($item): ?>
+  <div class=" w-75 mx-auto bg-light d-flex flex-column text-center">
   <img src="<?php echo $item['image'] ?>" class=" img-fluid align-self-center" alt="item image" width="250" height="400">
   <div class="card-body bg-white">
     <p class="card- text-primary"><?php echo $item['category'] ?></p>
@@ -59,7 +60,13 @@ if(!$connection){
     <a href="#" class="card-link align-self-center d-block btn btn-secondary w-50 d-block">Delete</a>
   </div>
 </div>
+<?php else:?>
+<h3 class="text-center text-danger">Error: This item doesn't exist!</h3>
+<?php endif; ?>
 </div>
+
+
+
 
 <!-- Start Footer-->
 <?php include "templates/footer.php";?>
