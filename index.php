@@ -11,9 +11,9 @@ if(!$connection){
 }
 
 // 1: CONSTRUCT QUERY: select all the data from the shopping_items table
-$sqlQuery = "SELECT name, category, store, link FROM shopping_items";
+$sqlQuery = "SELECT name, title, category, store, link, image FROM items ORDER BY created DESC";
 
-// 2: MAKE QUERY: get the result
+// 2: MAKE QUERY RESULT: get the result
 $result = mysqli_query($connection,$sqlQuery);
 
 // 3: FETCH RESULT: get resulting rows as an array
@@ -30,9 +30,55 @@ ChromePhp::log($items);
 
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
 
+<!-- Start Header-->
 <?php include "templates/header.php";?>
+
+
+
+<!-- Start Jumbotrom-->
+<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-6 px-0 mx-auto text-center">
+      <h1 class="display-4 font-italic">Save Products From Your Favorite Stores</h1>
+      <p class="lead my-3">Have your wishlists in one place. Whenever you find something you want, just save it in Savelist from any store around the web.</p>
+      <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+    </div>
+  </div>
+
+
+<!-- Start Cards-->
+<div class="container">
+  <div class="row mb-2">
+
+    <?php foreach($items as $item){?>
+      <div class="col-md-6 col-sm-12">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 my-auto d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary"><?php echo htmlspecialchars($item['category']); ?></strong>
+          <h5 class="mb-0"><?php echo htmlspecialchars($item['title']); ?></h5>
+          <h6 class="mb-0"><?php echo htmlspecialchars($item['store']); ?></h6>
+          <div class="mb-1 text-muted"><?php echo "by " . htmlspecialchars($item['name']); ?></div>
+          <a href="<?php echo htmlspecialchars($item['link']); ?>" target="_blank" class="stretched-link">Buy item</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+        <img src="<?php echo htmlspecialchars($item['image']); ?>" alt="" width="200" height="250">
+        </div>
+      </div>
+    </div>
+    <?php } ?>
+    </div>
+  </div>
+ 
+
+
+<!-- Start Footer-->
 <?php include "templates/footer.php";?>
+
+</html>
+
+
 
 
 

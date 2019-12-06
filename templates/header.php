@@ -14,7 +14,7 @@
 
 #brand {
   font-weight: bold !important;
-  color: white !important;
+  color: #000 !important;
 }
 
 form{
@@ -34,9 +34,9 @@ button{
 
 <body>
 <div class="container-fuid">
-  <nav class="navbar navbar-light bg-dark px-5">
+  <nav class="navbar navbar-light bg-white px-5">
     <a href="index.php" class="navbar-brand" id="brand">Shopping List</a>
-    <a class="btn btn-light my-2 my-sm-0">Add New Item</a>
+    <a class="btn btn-outline-dark my-2 my-sm-0">Add New Item</a>
   </nav>
 </div>
 
