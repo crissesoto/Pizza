@@ -1,5 +1,16 @@
 <?php include "templates/header.php";?>
 
+<?php 
+// connect to the data base using MysqlI or PDO
+// $var_to_store_data = mysqli_connect("host","user","passw","name database");
+$connection = mysqli_connect("localhost","crisse","Serimi03","Shopping_List");
+
+// check connection
+if(!$connection){
+  echo "connection failed: ". mysqli_connect_error();
+}
+?>
+
 
 <?php 
 
@@ -65,7 +76,26 @@ if(isset($_POST["submit"])){
 
 
   if(!array_filter($errors)){
-    header("location: index.php");
+
+    $name = mysqli_real_escape_string($connection, $_POST["name"]);
+    $title = mysqli_real_escape_string($connection, $_POST["title"]);
+    $category = mysqli_real_escape_string($connection, $_POST["category"]);
+    $store = mysqli_real_escape_string($connection, $_POST["store"]);
+    $link = mysqli_real_escape_string($connection, $_POST["link"]);
+    $image = mysqli_real_escape_string($connection, $_POST["image"]);
+
+    // create query to insert data into the database
+    $sqlQuery = "INSERT INTO items(name, title, category, store, link, image) VALUES('$name', '$title', '$category', '$store','$link', '$image')"; 
+
+    // save the query to the database and check if it works
+    if(mysqli_query($connection, $sqlQuery)){
+      // relocate to the homepage
+      header("location: index.php");
+    }else{
+      echo "Error: " . mysqli_error($connection); 
+    }
+
+
   };
 };
 
@@ -81,8 +111,8 @@ if(isset($_POST["submit"])){
     <input type="text" name="name" value="<?php echo $name ?>">
     <div class="text-danger"> <?php echo $errors["name"]; ?> </div>
 
-    <label for="category">Item name:</label>
-    <input type="text" name="category" value="<?php echo $title ?>">
+    <label for="title">Item's name:</label>
+    <input type="text" name="title" value="<?php echo $title ?>">
     <div class="text-danger"> <?php echo $errors["title"]; ?> </div>
 
     <label for="category">Category:</label>
@@ -97,8 +127,8 @@ if(isset($_POST["submit"])){
     <input type="href" name="link" value="<?php echo $link ?>">
     <div class="text-danger"> <?php echo $errors["link"]; ?> </div>
 
-    <label for="link">Item image:</label>
-    <input type="href" name="link" value="<?php echo $image ?>">
+    <label for="image">Item image:</label>
+    <input type="href" name="image" value="<?php echo $image ?>">
     <div class="text-danger"> <?php echo $errors["image"]; ?> </div>
 
     <div class="text-center mt-2">

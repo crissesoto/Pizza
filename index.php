@@ -11,7 +11,7 @@ if(!$connection){
 }
 
 // 1: CONSTRUCT QUERY: select all the data from the shopping_items table
-$sqlQuery = "SELECT name, title, category, store, link, image FROM items ORDER BY created DESC";
+$sqlQuery = "SELECT name, title, category, store, link, id image FROM items ORDER BY created DESC";
 
 // 2: MAKE QUERY RESULT: get the result
 $result = mysqli_query($connection,$sqlQuery);
@@ -27,8 +27,8 @@ mysqli_close($connection);
 
 //ChromePhp::log($items);
 
-?>
 
+?>
 
 
 <!DOCTYPE html>
@@ -60,8 +60,10 @@ mysqli_close($connection);
           <strong class="d-inline-block mb-2 text-primary"><?php echo htmlspecialchars($item['category']); ?></strong>
           <h5 class="mb-0"><?php echo htmlspecialchars($item['title']); ?></h5>
           <h6 class="mb-0"><?php echo htmlspecialchars($item['store']); ?></h6>
-          <div class="mb-1 text-muted"><?php echo "by " . htmlspecialchars($item['name']); ?></div>
-          <a href="<?php echo htmlspecialchars($item['link']); ?>" target="_blank" class="stretched-link">Buy item</a>
+          <div class="mb-1 text-muted"><?php echo htmlspecialchars($item['store']); ?></div>
+          <a href="<?php echo htmlspecialchars($item['link']); ?>" target="_blank" class="btn btn-secondary w-50">Buy item</a>
+          <hr class="text-black">
+          <a href="details.php?id=<?php echo $item['id'] ?>" class="text-muted text-center w-25 align-self-end">INFO</a>
         </div>
         <div class="col-auto d-none d-lg-block">
         <img src="<?php echo htmlspecialchars($item['image']); ?>" alt="" width="200" height="250">
