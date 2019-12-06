@@ -105,8 +105,8 @@ if(isset($_POST["submit"])){
 
 
 <section class="container d-flex flex-column justify-content-center content mb-3 bg-light">
-  <form action="additem.php" method="POST" class="d-flex flex-column align-self-center">
-  <h4 class="text-center ">Add Item</h4>
+  <form action="additem.php" method="POST" class="d-flex flex-column align-self-center text-center">
+  <h2 class="pb-3">Add a new item to your shopping list</h2>
   <label for="name">Your Name:</label>
     <input type="text" name="name" value="<?php echo $name ?>">
     <div class="text-danger"> <?php echo $errors["name"]; ?> </div>

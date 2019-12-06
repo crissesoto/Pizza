@@ -35,6 +35,17 @@ button{
   margin-top: 20px !important;
 }
 
+input{
+  width: 40vw;
+  margin: auto;
+}
+
+label{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: grey;
+}
+
 /* On screens that are 600px or less*/
 @media screen and (max-width: 600px) {
   .title {
