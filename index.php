@@ -39,17 +39,17 @@ ChromePhp::log($items);
 
 
 <!-- Start Jumbotrom-->
-<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+<div class="jumbotron p-1 p-md-5 text-white rounded bg-dark">
     <div class="col-md-6 px-0 mx-auto text-center">
-      <h1 class="display-4 font-italic">Save Products From Your Favorite Stores</h1>
-      <p class="lead my-3">Have your wishlists in one place. Whenever you find something you want, just save it in Savelist from any store around the web.</p>
-      <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+      <h1 class="display-5 font-italic title">Save Products From Your Favorite Stores</h1>
+      <p class="lead my-3 para">Have your wishlists in one place. Whenever you find something you want, just save it in Savelist from any store around the web.</p>
+      <p class="lead mb-0 read"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
     </div>
   </div>
 
 
 <!-- Start Cards-->
-<div class="container">
+<div class="container mb-3">
   <div class="row mb-2">
 
     <?php foreach($items as $item){?>

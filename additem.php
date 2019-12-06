@@ -62,20 +62,21 @@ if(isset($_POST["submit"])){
   }else{
     $image =  htmlspecialchars($_POST["image"]);
   };
+
+
+  if(!array_filter($errors)){
+    header("location: index.php");
+  };
 };
 
-if(!array_filter($errors)){
-  //header("location: index.php");
-};
 
 ?>
 
 
 
-<section class="container d-flex flex-column justify-content-center content">
-  <h4 class="text-center ">Add Item</h4>
+<section class="container d-flex flex-column justify-content-center content mb-3 bg-light">
   <form action="additem.php" method="POST" class="d-flex flex-column align-self-center">
-    
+  <h4 class="text-center ">Add Item</h4>
   <label for="name">Your Name:</label>
     <input type="text" name="name" value="<?php echo $name ?>">
     <div class="text-danger"> <?php echo $errors["name"]; ?> </div>
@@ -100,7 +101,7 @@ if(!array_filter($errors)){
     <input type="href" name="link" value="<?php echo $image ?>">
     <div class="text-danger"> <?php echo $errors["image"]; ?> </div>
 
-    <div class="text-center mt-3">
+    <div class="text-center mt-2">
     <button class="btn btn-dark my-2 my-sm-0" type="submit" value="submit" name="submit">Submit</button>
     </div>
 

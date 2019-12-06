@@ -12,31 +12,50 @@
 
 <style>
 
+*{
+  box-sizing: border-box;
+}
+
 #brand {
   font-weight: bold !important;
   color: #000 !important;
 }
 
-form{
-  width: 35vw;
-  margin: 20px auto;
+.content{
+  height: 75vh;
   padding: 10px;
+  margin-top: 8vh;
+}
+form{
+  width: 45vw;
+  margin: auto
 }
 
 button{
   margin-top: 20px !important;
 }
 
-.content{
-  height: 85vh;
+/* On screens that are 600px or less*/
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 24px;
+  }
+  .para {
+    font-size: 16px;
+
+  }
+  .read {
+    font-size: 16px;
+  }
 }
+
 </style>
 
 <body>
 <div class="container-fuid">
   <nav class="navbar navbar-light bg-white px-5">
     <a href="index.php" class="navbar-brand" id="brand">Shopping List</a>
-    <a class="btn btn-outline-dark my-2 my-sm-0">Add New Item</a>
+    <a class="btn btn-dark text-white my-2 my-sm-0 font-weight-bold">Add New Item</a>
   </nav>
 </div>
 
