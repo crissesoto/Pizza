@@ -51,7 +51,7 @@ button{
 
 </style>
 
-<body>
+<body class="bg-light">
 <div class="container-fuid">
   <nav class="navbar navbar-light bg-white px-5">
     <a href="index.php" class="navbar-brand" id="brand">Shopping List</a>
