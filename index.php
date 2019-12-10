@@ -43,7 +43,6 @@ mysqli_close($connection);
     <div class="col-md-6 px-0 mx-auto text-center">
       <h1 class="display-5 font-italic title">Save Products From Your Favorite Stores</h1>
       <p class="lead my-3 para">Have your wishlists in one place. Whenever you find something you want, just save it in Savelist from any store around the web.</p>
-      <p class="lead mb-0 read"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
     </div>
   </div>
 

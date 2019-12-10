@@ -88,7 +88,6 @@ if(!$connection){
 <?php endif; ?>
 </div>
 
-
 <!-- Start Footer-->
 <?php include "templates/footer.php";?>
 </html>
