@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
+<?php include "ChromePhp.php"; ?>
 <?php 
 
 // connect to the data base using MysqlI or PDO
@@ -43,6 +43,8 @@ if(!$connection){
 
 <!-- Start Header-->
 <?php include "templates/header.php";?>
+
+<!-- main  -->
 <div class="container w-75 ">
 <?php if($item): ?>
   <div class=" w-75 mx-auto bg-light d-flex flex-column text-center">
@@ -56,17 +58,19 @@ if(!$connection){
     <li class="list-group-item"><?php echo "By " . $item['name'] ?></li>
     <li class="list-group-item"><?php echo "Created: " . $item['created'] ?></li>
   </ul>
-  <div class="card-body d-flex flex-column">
-    <a href="#" class="card-link align-self-center d-block btn btn-secondary w-50 d-block">Delete</a>
-  </div>
 </div>
+<!-- Delete a record -->
+<form action="details.php">
+  <input type="hidden" name="delete_id" value="<?php echo $item['id'] ?>">
+  <input type="submit" name="delete_button" value="Delete Item" class="card-link align-self-center d-block btn btn-secondary w-50 d-block">
+</form>
+
 <?php else:?>
 <h3 class="text-center text-danger">Error: This item doesn't exist!</h3>
 <?php endif; ?>
 </div>
 
-
-
+<?php ChromePhp::log($item); ?>
 
 <!-- Start Footer-->
 <?php include "templates/footer.php";?>

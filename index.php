@@ -58,7 +58,7 @@ mysqli_close($connection);
         <div class="col p-4 my-auto d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary"><?php echo htmlspecialchars($item['category']); ?></strong>
           <h5 class="mb-0"><?php echo htmlspecialchars($item['title']); ?></h5>
-          <h6 class="mb-0"><?php echo htmlspecialchars($item['store']); ?></h6>
+          <h6 class="mb-0"><?php echo htmlspecialchars($item['category']); ?></h6>
           <div class="mb-1 text-muted"><?php echo htmlspecialchars($item['store']); ?></div>
           <a href="<?php echo htmlspecialchars($item['link']); ?>" target="_blank" class="btn btn-secondary w-50">Buy item</a>
           <hr class="text-black">
