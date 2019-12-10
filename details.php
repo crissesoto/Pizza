@@ -16,6 +16,23 @@ if(!$connection){
 ?>
 
 <?php 
+  // check if the POST id is set
+
+  if(isset($_POST['delete_button'])){
+    $delete_id = mysqli_real_escape_string($connection,$_POST['delete_id']);
+    $sqlQuery = "DELETE FROM items WHERE id = $delete_id";
+
+    if(mysqli_query($connection,$sqlQuery)){
+      // succes
+      header("location: index.php");
+    }{
+      // failure
+      echo "Error: " . mysqli_error($connection);
+    }
+  }
+
+
+
   // check if the Get id is set
   if(isset($_GET['id'])){
     $id = mysqli_real_escape_string($connection,$_GET["id"]);
@@ -60,17 +77,17 @@ if(!$connection){
   </ul>
 </div>
 <!-- Delete a record -->
-<form action="details.php">
+<form action="details.php" method="POST">
   <input type="hidden" name="delete_id" value="<?php echo $item['id'] ?>">
   <input type="submit" name="delete_button" value="Delete Item" class="card-link align-self-center d-block btn btn-secondary w-50 d-block">
 </form>
+
 
 <?php else:?>
 <h3 class="text-center text-danger">Error: This item doesn't exist!</h3>
 <?php endif; ?>
 </div>
 
-<?php ChromePhp::log($item); ?>
 
 <!-- Start Footer-->
 <?php include "templates/footer.php";?>

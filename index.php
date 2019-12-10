@@ -70,7 +70,6 @@ mysqli_close($connection);
       </div>
     </div>
     <?php } ?>
-    </div>
   </div>
  
 
