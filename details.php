@@ -25,7 +25,7 @@ if(!$connection){
     if(mysqli_query($connection,$sqlQuery)){
       // succes
       header("location: index.php");
-    }{
+    }else{
       // failure
       echo "Error: " . mysqli_error($connection);
     }
