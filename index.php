@@ -11,7 +11,7 @@ if(!$connection){
 }
 
 // 1: CONSTRUCT QUERY: select all the data from the shopping_items table
-$sqlQuery = "SELECT name, title, category, store, link, id, image FROM items ORDER BY created DESC";
+$sqlQuery = "SELECT name, title, category, store, link, id, image FROM items ORDER BY created_at DESC";
 
 // 2: get RESULT: get the result
 $result = mysqli_query($connection,$sqlQuery);
