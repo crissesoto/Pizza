@@ -39,12 +39,13 @@ mysqli_close($connection);
 
 
 <!-- Start Jumbotrom-->
-<div class="jumbotron p-1 p-md-5 text-white rounded bg-dark">
+<div class="jumbotron p-1 p-md-5 text-white rounded" style="background-color: #f5b2b2">
     <div class="col-md-6 px-0 mx-auto text-center">
       <h1 class="display-5 font-italic title">Save Products From Your Favorite Stores</h1>
       <p class="lead my-3 para">Have your wishlists in one place. Whenever you find something you want, just save it in Savelist from any store around the web.</p>
     </div>
   </div>
+
 
 
 <!-- Start Cards-->
@@ -55,11 +56,11 @@ mysqli_close($connection);
       <div class="col-md-6 col-sm-12">
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 my-auto d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary"><?php echo htmlspecialchars($item['category']); ?></strong>
+          <strong class="d-inline-block mb-2 text-danger"><?php echo htmlspecialchars($item['category']); ?></strong>
           <h5 class="mb-0"><?php echo htmlspecialchars($item['title']); ?></h5>
           <h6 class="mb-0"><?php echo htmlspecialchars($item['category']); ?></h6>
           <div class="mb-1 text-muted"><?php echo htmlspecialchars($item['store']); ?></div>
-          <a href="<?php echo htmlspecialchars($item['link']); ?>" target="_blank" class="btn btn-secondary w-50">Buy item</a>
+          <a href="<?php echo htmlspecialchars($item['link']); ?>" target="_blank" class="btn  w-50 text-white" style="background-color: #f5b2b2;">Buy item</a>
           <hr class="text-black">
           <a href="details.php?id=<?php echo $item['id'] ?>" class="text-muted text-center w-25 align-self-end">INFO</a>
         </div>
